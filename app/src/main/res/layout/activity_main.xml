@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F3F4F6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Título do App -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔒 Senha Overlord"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crie uma senha que atenda a todas as exigências do sistema."
+            android:textSize="14sp"
+            android:textColor="#6B7280"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Container do Formulário -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/result_background"
+            android:padding="20dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Digite sua senha"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Campo de Texto para Senha -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Sua senha secreta..."
+                android:inputType="textPassword"
+                android:paddingHorizontal="16dp"
+                android:textColor="#1F2937"
+                android:textColorHint="#9CA3AF"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Botão para Validar -->
+            <Button
+                android:id="@+id/btnValidate"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/button_background"
+                android:text="Validar Senha"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:stateListAnimator="@null" />
+
+        </LinearLayout>
+
+        <!-- Container do Resultado da Validação -->
+        <LinearLayout
+            android:id="@+id/cardResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/result_background"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvResultTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultado da Validação"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#9CA3AF"
+                android:layout_marginBottom="8dp"
+                android:textAllCaps="true"/>
+
+            <!-- TextView que exibe erro/sucesso -->
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Digite sua senha e toque em Validar para começar."
+                android:textSize="16sp"
+                android:textColor="#4B5563"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Informações adicionais na tela -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dica: O validador interrompe o processo na primeira regra violada e diz o que está faltando!"
+            android:textSize="12sp"
+            android:textColor="#9CA3AF"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:paddingHorizontal="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

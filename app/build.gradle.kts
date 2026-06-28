@@ -5,11 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.password_overlord_kotlin"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.example.password_overlord_kotlin"
